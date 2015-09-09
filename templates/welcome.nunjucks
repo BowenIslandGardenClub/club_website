@@ -1,0 +1,18 @@
+      <!-- WELCOME SECTION -->
+      <section id="welcome">
+	      
+        <div class="container">
+		<ul class="slider" data-fireslider-breakpoints='[{"breakpoint": 860, "show": 2, "active": 2},{"breakpoint": 260, "show": 1, "active": 1}]'>
+		    <li><img src="images/welcome1.jpg"></li>
+		    <li><img src="images/welcome2.jpg"></li>
+		    <li><img src="images/welcome3.jpg"></li>
+		    <li><img src="images/welcome4.jpg"></li>
+		    <li><img src="images/welcome5.jpg"></li>
+		    <li><img src="images/welcome6.jpg"></li>
+		</ul>
+        </div>
+		<div  itemprop="description"><p>The Bowen Island Garden Club enjoys a 35-year tradition on the island. Its mission
+is to promote the love of gardening, to encourage sound horticultural practices through education, and to enhance civic beautification.</p>
+<p>This page provides an overview of upcoming events and club activities.  For more information, we invite you to check the links provided in the menu.</p>
+		</div>
+      </section>

@@ -1,0 +1,196 @@
+// Test of Modernizr for svg text
+
+a img {
+	border: none;
+}
+
+.centered-navigation {
+  $base-border-radius: 3px !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+//  $base-font-color: $dark-gray !default;
+  $base-font-color: #fff;
+  $centered-navigation-padding: 1em;
+  $centered-navigation-logo-height: 2em;
+//  $centered-navigation-background: #E7F1EC;
+  $centered-navigation-background: hsla(295, 50,25,0.6);
+  $centered-navigation-color: transparentize($base-font-color, 0.3);
+  $centered-navigation-color-hover: $base-font-color;
+  $centered-navigation-height: 60px;
+  $centered-navigation-item-padding: 1em;
+  $centered-navigation-submenu-padding: 1em;
+  $centered-navigation-submenu-width: 12em;
+  $centered-navigation-item-nudge: 2.2em;
+  $horizontal-bar-mode: $large-screen;
+
+  background-color: rgb(red($centered-navigation-background), green($centered-navigation-background), blue($centered-navigation-background));  // converting to rgb
+  @include background(linear-gradient(320deg, $centered-navigation-background, shade($centered-navigation-background,70%)) left repeat); 
+  border-bottom: 1px solid darken($centered-navigation-background, 6%);
+  min-height: $centered-navigation-height;
+  width: 100%;
+  z-index: 9999;
+  position: relative;
+
+ 
+  // Mobile view
+
+    .mobile-logo {
+      display: inline;
+	  border: none;		//Is this necessary for IE8?
+//      float: left;	//Floats need to be disabled in IE8!
+      max-height: $centered-navigation-height;
+      padding-left: $centered-navigation-padding;
+
+      .icon {
+        max-height: $centered-navigation-height;
+        opacity: 1;
+        padding: .2em 0;
+		width: 11em;
+		@include media(420px){
+			width: 16em;
+		}
+      }
+	 
+
+
+      @include media($horizontal-bar-mode) {
+        display: none;
+      }
+    }
+
+    .centered-navigation-mobile-menu {
+      color: $centered-navigation-color;
+      display: block;
+      float: right;
+      font-weight: 700;
+      line-height: $centered-navigation-height;
+      margin: 0;
+      padding-right: $centered-navigation-submenu-padding;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include media ($horizontal-bar-mode) {
+        display: none;
+      }
+
+      &:focus,
+      &:hover {
+        color: $centered-navigation-color-hover;
+      }
+    }
+
+  
+  // Nav menu
+
+    .centered-navigation-wrapper {
+      @include outer-container;
+      @include clearfix;
+      position: relative;
+      z-index: 999;
+	  
+	  #menu-title {
+		  display: none;
+		  padding: 0 0 0 1em;
+	      @include media ($horizontal-bar-mode) {
+			display: block;
+			& .icon {
+				width: 40em;
+			}
+		}
+		  
+	  }
+	  
+    }
+
+    ul.centered-navigation-menu {
+      -webkit-transform-style: preserve-3d; 
+  // stop webkit flicker
+      clear: both;
+      display: none;
+      margin: 0 auto;
+      overflow: visible;
+      padding: 0;
+      width: 100%;
+      z-index: 99999;
+
+      &.show {
+        display: block;
+      }
+
+      @include media ($horizontal-bar-mode) {
+        display: block;
+        text-align: center;
+      }
+    }
+
+  
+  // The nav items
+
+    .nav-link:first-child {
+      @include media($horizontal-bar-mode) {
+        margin-left: $centered-navigation-item-nudge;
+      }
+    }
+
+    ul li.nav-link {
+//      background: $centered-navigation-background;
+      @include background(linear-gradient($centered-navigation-background, shade($centered-navigation-background,60%)) left repeat); 
+//      @include background(linear-gradient(#1e5799, #2989d8) left repeat); 
+	  display: block;
+      line-height: $centered-navigation-height;
+      overflow: hidden;
+      padding-right: $centered-navigation-submenu-padding;
+      text-align: right;
+      width: 100%;
+      z-index: 9999;
+
+      a {
+        color: $centered-navigation-color;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          color: $centered-navigation-color-hover;
+        }
+      }
+
+      @include media($horizontal-bar-mode) {
+        background: transparent;
+        display: inline;
+        line-height: $centered-navigation-height;
+
+        a {
+          padding-right: $centered-navigation-item-padding;
+        }
+      }
+    }
+
+    li.logo.nav-link {
+      display: none;
+      line-height: 0;
+
+      @include media($large-screen) {
+        display: inline;
+      }
+    }
+
+    .logo img {
+      margin-bottom: -$centered-navigation-logo-height / 3;
+      max-height: $centered-navigation-logo-height;
+      opacity: 0.6;
+    }
+
+ 
+  
+}
+
+.off-page-jump {
+    $centered-navigation-background: hsla(295, 50,25,0.6);
+    $centered-navigation-color: transparentize($base-font-color, 0.2);
+
+	float: right;
+	@include button(shiny, $centered-navigation-color);
+	padding: 0.7em 1em;
+}

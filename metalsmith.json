@@ -1,0 +1,13 @@
+{
+  "source": "src",
+  "destination": "build",
+  "plugins": {
+    "contentful-metalsmith": {
+      "accessToken" : "b617ee1f8cd5968823d5ea8aa63fbadb92ce65f2ef9c6f64cee6a5b184111279"
+    },
+    "metalsmith-layouts" : {
+      "engine" : "handlebars",
+      "directory" : "templates"
+    }
+  }
+}

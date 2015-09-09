@@ -1,0 +1,23 @@
+  <!-- NEWS SECTION -->
+  <section id="news">
+          <h1>Garden Club News</h1>
+		  
+		  <p>The Bowen Island Garden Club publishes a monthly newsletter, <i>Cuttings</i>,
+		  which keeps members up-to-date on latest Club news and happenings.  Some of the
+		  articles in this month's issue include: </p>
+
+		  {% for newsItem in contentful.contentTypes[newsID] %}
+		  <div class="container">
+          <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="category" content="{{newsItem.data.fields.category}}"</div>
+			<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
+				<div itemprop="description"><p>{{newsItem.data.fields.description}}</p></div>
+			</div>
+		  </div>
+		  </div>  <!-- container -->
+			{% endfor %}
+
+	<div class="button-wrapper">
+	<button class="off-page-jump">Read Issues of <i>Cuttings</i></button>
+	</div>
+  </section>  <!-- NEWS SECTION -->

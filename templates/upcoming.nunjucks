@@ -1,0 +1,29 @@
+      <!-- EVENTS SECTION -->
+      <section id="upcoming">
+        <h1>Upcoming Events</h1>
+        <div class="container">
+		{% for event in contentful.contentTypes[upcomingID] %}
+			<div itemprop="event" itemscope itemtype="http://schema.org/Event" class="row">
+				<div class="venue">
+		  			<time itemprop="startDate" content="2016-04-21T20:00">{{moment(event.data.fields.timeAndDate).format("dddd, MMM DD [at] h:mm  A")}}</time>
+			  		<span itemprop="name">{{event.data.fields.name}}</span>
+					<div itemprop="location" itemscope itemtype="http://schema.org/Place">
+						<div itemprop="name">{{event.data.fields.placeName}}</div>
+					    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					      <span itemprop="addressLocality">Bowen Island Municipality</span>,
+					      <span itemprop="addressRegion">British Columbia</span>
+					    </div>
+			    	</div>
+				</div>
+		  		<div itemprop="description">{{event.data.fields.description}}</div>
+			  <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+			  {{event.data.fields.bookingInfo}}
+			  {% if event.data.fields.price %}<p>Cost: <span itemprop="lowPrice">{{event.data.fields.price}}</span></p>
+			  {% endif %}
+			  {% if event.data.fields.limit %}<p><span itemprop="offerCount">{{event.data.fields.limit}}</span> spaces available</p>{% endif %}
+			  </div>
+		    </div> <!-- class="row" -->
+			{% endfor %}
+			<button class="off-page-jump">See More Events</button>
+        </div><!-- /.container -->
+      </section><!-- /.row -->

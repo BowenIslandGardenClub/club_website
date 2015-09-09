@@ -1,0 +1,9 @@
+@include keyframes(slideIn) {
+	from { background-position: 0 0; }
+	to { background-position: -100px 0; }
+}
+
+
+//#welcome .container {
+//	@include animation(slideIn 10.0s ease-in-out infinite alternate);
+//}
