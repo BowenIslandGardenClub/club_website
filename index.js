@@ -4,9 +4,8 @@ var nunjucks = require('nunjucks');
 var handlebars = require('handlebars');
 var markdown = require('metalsmith-markdown');
 var contentful = require('contentful-metalsmith');
-var moment = require('moment');
+var moment = require('moment-timezone');
 var ESAPI = require('node-esapi');
-var string = require('string');
 
 var logFilesMap = function(files, metalsmith, done) {
     Object.keys(files).forEach(function (file) {
@@ -49,8 +48,7 @@ Metalsmith(__dirname)
       engine: 'nunjucks',
       directory: 'templates',
       moment: moment,
-      ESAPI: ESAPI,
-      string: string}
+      ESAPI: ESAPI}
     ))
     .build(function(err) {
         if (err) {
