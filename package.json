@@ -20,6 +20,7 @@
     "metalsmith-rho": "0.0.2",
     "metalsmith-templates": "^0.7.0",
     "moment": "^2.10.6",
+    "moment-timezone": "^0.4.0",
     "node-esapi": "0.0.1",
     "nunjucks": "^2.0.0",
     "sort-by": "^1.1.1"
