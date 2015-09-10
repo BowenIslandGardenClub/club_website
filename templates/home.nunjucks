@@ -53,11 +53,11 @@
 
 {% include "./templates/upcoming.nunjucks" %}
 
-{% include "./templates/activities.nunjucks" %}
-
 {% include "./templates/news.nunjucks" %}
 
 {% include "./templates/membership.nunjucks" %}
+
+{% include "./templates/activities.nunjucks" %}
 
 </main>
 
