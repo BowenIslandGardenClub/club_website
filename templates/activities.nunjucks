@@ -8,7 +8,7 @@
           <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
             <div itemprop="category">{{activity.data.fields.category}}</div>
 			<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
-				<div itemprop="description">{{activity.data.fields.description}}</div>
+				<div itemprop="description">{{marked(activity.data.fields.description) | safe}}</div>
 			</div>
 		  </div>
         </div><!-- /.container -->

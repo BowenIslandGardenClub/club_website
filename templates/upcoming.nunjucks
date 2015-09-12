@@ -2,10 +2,10 @@
       <section id="upcoming">
         <h1>Upcoming Events</h1>
         <div class="container">
-		{% for event in contentful.contentTypes[upcomingID] %}
+		{% for event in contentful.contentTypes[upcomingID].sort(sortBy('data.fields.placeName')) %}
 			<div itemprop="event" itemscope itemtype="http://schema.org/Event" class="row">
 				<div class="venue">
-		  			<time itemprop="startDate" content="{{event.data.fields.timeAndDate}}">{{moment(event.data.fields.timeAndDate, "YYYY-MM-DDTHH:mmZ").tz("Canada/Pacific").format("dddd, MMM DD [at] h:mm  A")}}</time>
+		  			<time itemprop="startDate" content="{{ESAPI.encoder().encodeForHTMLAttribute(event.data.fields.timeAndDate)}}">{{moment(event.data.fields.timeAndDate, "YYYY-MM-DDTHH:mmZ").tz("Canada/Pacific").format("dddd, MMM DD [at] h:mm  A")}}</time>
 			  		<span itemprop="name">{{event.data.fields.name}}</span>
 					<div itemprop="location" itemscope itemtype="http://schema.org/Place">
 						<div itemprop="name">{{event.data.fields.placeName}}</div>
@@ -15,7 +15,7 @@
 					    </div>
 			    	</div>
 				</div>
-		  		<div itemprop="description">{{event.data.fields.description}}</div>
+		  		<div itemprop="description">{{marked(event.data.fields.description) | safe}}</div>
 			  <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
 			  {{event.data.fields.bookingInfo}}
 			  {% if event.data.fields.price %}<p>Cost: <span itemprop="lowPrice">{{event.data.fields.price}}</span></p>

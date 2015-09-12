@@ -11,7 +11,7 @@
           <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
             <meta itemprop="category" content="{{newsItem.data.fields.category}}"</div>
 			<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
-				<div itemprop="description"><p>{{newsItem.data.fields.description}}</p></div>
+				<div itemprop="description">{{marked(newsItem.data.fields.description) | safe}}</div>
 			</div>
 		  </div>
 		  </div>  <!-- container -->
