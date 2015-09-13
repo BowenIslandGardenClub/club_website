@@ -17,7 +17,9 @@
 		  </div>  <!-- container -->
 			{% endfor %}
 
+<!--
 	<div class="button-wrapper">
 	<button class="off-page-jump">Read Issues of <i>Cuttings</i></button>
 	</div>
+-->
   </section>  <!-- NEWS SECTION -->

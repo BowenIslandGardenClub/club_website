@@ -13,8 +13,10 @@
 		  </div>
         </div><!-- /.container -->
 		  {% endfor %}
+<!--
 	<div class="button-wrapper">
 	<button class="off-page-jump">See More Membership Activities</button>
 	</div>
+-->
 	
       </section><!-- /#activities -->		  

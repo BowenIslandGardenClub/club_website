@@ -24,6 +24,6 @@
 			  </div>
 		    </div> <!-- class="row" -->
 			{% endfor %}
-			<button class="off-page-jump">See More Events</button>
+<!--			<button class="off-page-jump">See More Events</button>  -->
         </div><!-- /.container -->
       </section><!-- /.row -->

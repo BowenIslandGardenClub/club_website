@@ -4,25 +4,14 @@
   </div>
   <div class="footer-links">
     <ul>
-      <li><h3>Content</h3></li>
-      <li><a href="javascript:void(0)">About</a></li>
-      <li><a href="javascript:void(0)">Contact</a></li>
-      <li><a href="javascript:void(0)">Advice</a></li>
+      <li><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#98;&#x6f;&#119;&#101;&#x6e;&#x69;&#115;&#x6c;&#x61;&#x6e;&#x64;&#x67;&#97;&#x72;&#100;&#x65;&#110;&#99;&#108;&#x75;&#98;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">Contact the Garden Club</a></li>
     </ul>
     <ul>
-      <li><h3>Follow Us</h3></li>
-      <li><a href="javascript:void(0)">Facebook</a></li>
-      <li><a href="javascript:void(0)">Twitter</a></li>
-      <li><a href="javascript:void(0)">YouTube</a></li>
+      <li><a href="javascript:void(0)">Visit Us on Facebook</a></li>
     </ul>
     <ul>
-      <li><h3>Legal</h3></li>
-      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-      <li><a href="javascript:void(0)">Privacy Policy</a></li>
     </ul>
   </div>
 
-  <hr>
 
-  <p>Disclaimer area (lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe).</p>
 </footer>
