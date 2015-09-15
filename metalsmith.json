@@ -2,12 +2,17 @@
   "source": "src",
   "destination": "build",
   "plugins": {
+    "metalsmith-clean" : true,
+    "metalsmith-drafts" : true,
     "contentful-metalsmith": {
-      "accessToken" : "b617ee1f8cd5968823d5ea8aa63fbadb92ce65f2ef9c6f64cee6a5b184111279"
+      "accessToken" : "523ad29cf40ce3587d53e637fd52aa49bade02364e7d95f9f12de9a85fbf777a"
     },
-    "metalsmith-layouts" : {
+    "metalsmith-templates" : {
       "engine" : "handlebars",
       "directory" : "templates"
+    },
+    "metalsmith-sass" : {
+      "includePaths" : ["bower_components/bootstrap-sass-official/assets/stylesheets/"]
     }
   }
 }

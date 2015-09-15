@@ -1,9 +1,10 @@
 var Metalsmith = require('metalsmith');
 var layouts = require('metalsmith-layouts');
+var templates = require('metalsmith-templates');
 var nunjucks = require('nunjucks');
-var handlebars = require('handlebars');
 var contentful = require('contentful-metalsmith');
 var moment = require('moment-timezone');
+var sass = require('metalsmith-sass');
 var ESAPI = require('node-esapi');
 var sortBy = require('sort-by');
 
@@ -49,7 +50,11 @@ Metalsmith(__dirname)
       accessToken : '523ad29cf40ce3587d53e637fd52aa49bade02364e7d95f9f12de9a85fbf777a'}))
 //    .use(logFilesMap)
 //    .use(logMetaData)
-    .use(layouts({
+  	.use(sass({
+  		outputStyle: "expanded",
+  		outputDir: 'css/'
+  	}))
+    .use(templates({
       engine: 'nunjucks',
       directory: 'templates',
       moment: moment,

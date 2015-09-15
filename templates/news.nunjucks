@@ -17,9 +17,11 @@
 		  </div>  <!-- container -->
 			{% endfor %}
 
-<!--
+
 	<div class="button-wrapper">
-	<button class="off-page-jump">Read Issues of <i>Cuttings</i></button>
+  <a href="news_cuttings.html">
+	<button class="off-page-jump">Read Current and Past Issues of <i>Cuttings</i></button>
+  </a>
 	</div>
--->
+
   </section>  <!-- NEWS SECTION -->
