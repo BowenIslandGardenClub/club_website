@@ -5,7 +5,7 @@
 		{% for event in contentful.contentTypes[upcomingID].sort(sortBy('data.fields.timeAndDate')) %}
 			<div itemprop="event" itemscope itemtype="http://schema.org/Event" class="row">
 				<div class="venue">
-		  			<time itemprop="startDate" content="{{ESAPI.encoder().encodeForHTMLAttribute(event.data.fields.timeAndDate)}}">{{moment(event.data.fields.timeAndDate).tz("Canada/Pacific").format("dddd, MMM DD [at] h:mm  A")}}</time>
+		  			<time itemprop="startDate" content="{{ESAPI.encoder().encodeForHTMLAttribute(event.data.fields.timeAndDate)}}">{{moment(event.data.fields.timeAndDate, "YYYY-MM-DDTHH:mmZ").tz("Canada/Pacific").format("dddd, MMM DD [at] h:mm  A")}}</time>
 			  		<span itemprop="name">{{event.data.fields.name}}</span>
 					<div itemprop="location" itemscope itemtype="http://schema.org/Place">
 						<div itemprop="name">{{event.data.fields.placeName}}</div>
