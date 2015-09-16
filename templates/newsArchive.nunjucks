@@ -75,18 +75,47 @@
   </div>
 </header>
 
-<h2><em>Cuttings</em>:</h2>The newsletter of the Bowen Island Garden Club
-<ul>
+<h2><em>Cuttings</em>:The newsletter of the Bowen Island Garden Club</h2>
 
-{% for archive in contentful.entries %}
+<main role="main" itemscope itemtype="http://schema.org/Organization">
 
 
-<li><a href="http:{{archive.data.fields.issue.fields.file.url}}"> {{archive.data.fields.issue.fields.description}}</a>
-</li>
 
+{% for archive in contentful.entries.sort(sortBy('-data.fields.yearMonth')) %}
+
+<div class="comment">
+
+  <div class="comment-image">
+    <!-- Cut icon by Icons8 -->
+    <img class="icon icons8-Cut" src="data:image/png;base64,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" width="64" height="64">
+  </div>
+  <div class="comment-content">
+    <a href="http:{{archive.data.fields.issue.fields.file.url}}"> <h4>{{archive.data.fields.issue.fields.title}}</h4></a>
+    <p>{{archive.data.fields.issue.fields.description}}</p>
+  </div>
+</div>
 {% endfor %}
-</ul>
 
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="images/BIGClogoScrSize.png" alt="Logo image">
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#98;&#x6f;&#119;&#101;&#x6e;&#x69;&#115;&#x6c;&#x61;&#x6e;&#x64;&#x67;&#97;&#x72;&#100;&#x65;&#110;&#99;&#108;&#x75;&#98;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">Contact the Garden Club</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.facebook.com/bowenislandgardenclub">Visit Us on Facebook</a></li>
+    </ul>
+    <ul>
+    </ul>
+  </div>
+
+
+</footer>
     <!-- JavaScript -->
 	
     <script src="scripts/bundle.js"></script>
