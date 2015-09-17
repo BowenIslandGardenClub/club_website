@@ -68,29 +68,33 @@
   </div>
 </header>
 
-<h1>Current and Past Issues of Cuttings</h1>
+<h1>Membership Resources</h1>
 
 <main role="main" itemscope itemtype="http://schema.org/Organization">
 
 
 
-{% for archive in contentful.entries.sort(sortBy('-data.fields.yearMonth')) %}
+{% for resource in contentful.entries.sort(sortBy('-data.fields.order')) %}
 
 <div class="comment">
 
   <div class="comment-image">
-    <!-- Cut icon by Icons8 -->
-    <img class="icon icons8-Cut" src="data:image/png;base64,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" width="64" height="64">
+    <img src="data:image/png;base64,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" width="64" height="64">
   </div>
   <div class="comment-content">
-    <a href="http:{{archive.data.fields.issue.fields.file.url}}"> <h4>{{archive.data.fields.issue.fields.title}}</h4></a>
-    <p>{{archive.data.fields.issue.fields.description}}</p>
+  {% if resource.data.fields.content %}
+  <a href="http:{{ESAPI.encoder().encodeForURL(resource.data.fields.content.fields.file.url)}}" target="_blank"> <h4>{{resource.data.fields.title}}</h4></a>
+  {% else %}
+    <h4>{{resource.data.fields.title}}</h4>
+  {% endif %}
+    <p>{{resource.data.fields.description}}</p>
   </div>
 </div>
 {% endfor %}
 
 
 </main>
+
 
 <footer class="footer" role="contentinfo">
   <div class="footer-logo">
@@ -101,10 +105,13 @@
       <li><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#98;&#x6f;&#119;&#101;&#x6e;&#x69;&#115;&#x6c;&#x61;&#x6e;&#x64;&#x67;&#97;&#x72;&#100;&#x65;&#110;&#99;&#108;&#x75;&#98;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">Contact the Garden Club</a></li>
     </ul>
     <ul>
-      <li><a href="https://www.facebook.com/bowenislandgardenclub target="_blank"">Visit Us on Facebook</a></li>
+      <li><a href="https://www.facebook.com/bowenislandgardenclub" target="_blank">Visit Us on Facebook</a></li>
     </ul>
     <ul>
     </ul>
+  </div>
+  <div class="credit-for-icons">
+  <p>Icon made by Freepik from www.flaticon.com
   </div>
 
 
