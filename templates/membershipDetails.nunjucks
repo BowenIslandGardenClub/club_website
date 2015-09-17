@@ -68,6 +68,8 @@
   </div>
 </header>
 
+<section id="membership">
+
 <h1>Membership Resources</h1>
 
 <main role="main" itemscope itemtype="http://schema.org/Organization">
@@ -95,6 +97,7 @@
 
 </main>
 
+</section>
 
 <footer class="footer" role="contentinfo">
   <div class="footer-logo">
