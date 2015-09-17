@@ -31,7 +31,7 @@
 
 	<div class="button-wrapper">
   <a href="member_info.html">
-	<button class="off-page-jump">More Information on Membership<i>Cuttings</i></button>
+	<button class="off-page-jump">More Information on Membership</button>
   </a>
 	</div>
   </section>  <!-- MEMBERSHIP SECTION -->
