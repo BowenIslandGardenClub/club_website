@@ -68,6 +68,7 @@
   </div>
 </header>
 
+<section id="news">
 <h1>Current and Past Issues of Cuttings</h1>
 
 <main role="main" itemscope itemtype="http://schema.org/Organization">
@@ -91,6 +92,7 @@
 
 
 </main>
+</section>
 
 <footer class="footer" role="contentinfo">
   <div class="footer-logo">
