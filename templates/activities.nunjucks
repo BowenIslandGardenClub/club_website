@@ -5,11 +5,11 @@
           <div class="container">
 		  <div class="images-wrapper" style="background: url({{ ESAPI.encoder().encodeForURL( activity.data.fields.photo.fields.file.url) if activity.data.fields.photo else 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png' }}); background-size: cover;">
 		  </div>
-          <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
+      <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
             <div itemprop="category">{{activity.data.fields.category}}</div>
-			<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
-				<div itemprop="description">{{marked(activity.data.fields.description) | safe}}</div>
-			</div>
+			      <div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
+				      <div itemprop="description">{{marked(activity.data.fields.description) | safe}}</div>
+			      </div>
 		  </div>
         </div><!-- /.container -->
 		  {% endfor %}
