@@ -2,7 +2,7 @@
       <section id="welcome">
 	      
         <div class="container">
-		<ul class="slider" data-fireslider-breakpoints='[{"breakpoint": 860, "show": 1, "active": 1},{"breakpoint": 260, "show": 1, "active": 1}]' data-fireslider-effect='fadeInOut' data-fireslider-speed=750 data-fireslider-easing="easeInOutSine">
+		<ul class="slider" data-fireslider-breakpoints='[{"breakpoint": 860, "show": 1, "active": 1},{"breakpoint": 260, "show": 1, "active": 1}]' data-fireslider-effect='fadeInOut' data-fireslider-speed=750 data-fireslider-easing="easeInOutExpo">
 		    <li><img src="images/welcome1.jpg"></li>
 		    <li><img src="images/welcome2.jpg"></li>
 		    <li><img src="images/welcome3.jpg"></li>
