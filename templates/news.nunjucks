@@ -9,7 +9,7 @@
 		  {% for newsItem in contentful.contentTypes[newsID] %}
 		  <div class="container">
           <div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
-            <meta itemprop="category" content="{{newsItem.data.fields.category}}"</div>
+            <meta itemprop="category" content="{{ESAPI.encoder().encodeForHTMLAttribute(newsItem.data.fields.category)}}"</div>
 			<div itemprop="itemOffered" itemscope itemtype="http://schema.org/Product">
 				<div itemprop="description">{{marked(newsItem.data.fields.description) | safe}}</div>
 			</div>
