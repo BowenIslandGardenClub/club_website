@@ -2,12 +2,16 @@
       <section id="welcome">
 	      
         <div class="container">
-		<ul class="slider" data-fireslider-breakpoints='[{"breakpoint": 860, "show": 1, "active": 1},{"breakpoint": 260, "show": 1, "active": 1}]' data-fireslider-effect='fadeInOut' data-fireslider-speed=750 data-fireslider-easing="easeInOutExpo">
-		    <li><img src="images/welcome1.jpg"></li>
+		<ul class="slider" data-fireslider-breakpoints='[{"breakpoint": 906, "show": 2, "active": 1},{"breakpoint": 260, "show": 1, "active": 1}]' data-fireslider-effect='fadeInOut' data-fireslider-speed=750 data-fireslider-easing="easeInSine">
+<!--		    <li><img src="images/welcome1.jpg"></li>
 		    <li><img src="images/welcome2.jpg"></li>
 		    <li><img src="images/welcome3.jpg"></li>
-<!--		    <li><img src="images/welcome4.jpg"></li>
+      -->
 
+       {% for splash in contentful.contentTypes[welcomeID].sort(sortBy('data.fields.title')) %}
+		    <li><img src="{{ ESAPI.encoder().encodeForURL(splash.data.fields.splashImage.fields.file.url) if splash.data.fields.splashImage else 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png' }}"></li>
+        {% endfor %}
+<!--
 		    <li><img src="images/welcome5.jpg"></li>
 		    <li><img src="images/welcome6.jpg"></li>
 -->
