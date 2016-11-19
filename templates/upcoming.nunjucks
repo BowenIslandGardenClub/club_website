@@ -15,13 +15,15 @@
 					    </div>
 			    	</div>
 				</div>
-		  		<div itemprop="description">{{marked(event.data.fields.description) | safe}}</div>
-			  <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-			  {{event.data.fields.bookingInfo}}
-			  {% if event.data.fields.price %}<p>Cost: <span itemprop="lowPrice">{{event.data.fields.price}}</span></p>
-			  {% endif %}
-			  {% if event.data.fields.limit %}<p><span itemprop="offerCount">{{event.data.fields.limit}}</span> spaces available</p>{% endif %}
-			  </div>
+		  		<div itemprop="description">{{marked(event.data.fields.description) | safe}}
+    			  <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+    			  {{event.data.fields.bookingInfo}}
+    			  {% if event.data.fields.price %}<p>Cost: <span itemprop="lowPrice">{{event.data.fields.price}}</span></p>
+    			  {% endif %}
+    			  {% if event.data.fields.limit %}<p><span itemprop="offerCount">{{event.data.fields.limit}}</span> spaces available</p>{% endif %}
+    			  </div>
+          </div> <!-- End of description -->
+
 		    </div> <!-- class="row" -->
 			{% endfor %}
 <!--			<button class="off-page-jump">See More Events</button>  -->

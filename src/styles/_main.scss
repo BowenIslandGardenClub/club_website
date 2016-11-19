@@ -95,11 +95,19 @@ main {
   [itemprop='description']{
     text-align: left;
   }
+  
+  // Modified by CDH on 18/11/16
+  // to give a two-column format (2-of-6 and 4 of 6)
+  // for events.  Note:  Also need to modify div structure of the template
+  // so that itemprop='offers' is part of the itemprop='description' div.
 	@include media($medium-screen-up) {
 	    border-bottom: 1px solid;
-		.venue, [itemprop='description'], [itemprop='offers'] {
+		.venue {
 			@include span-columns(2 of 6);
 		}
+    [itemprop='description'] {
+      @include span-columns(4 of 6);
+    }
 	}
 }
 div:last-of-type {
